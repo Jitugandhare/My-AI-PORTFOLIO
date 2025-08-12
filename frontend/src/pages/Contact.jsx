@@ -166,8 +166,8 @@ function Contact() {
                             {formResponse && (
                                 <div
                                     className={`p-4 ${formResponse.type === "success"
-                                            ? "bg-green-100 text-green-700"
-                                            : "bg-red-100 text-red-700"
+                                        ? "bg-green-100 text-green-700"
+                                        : "bg-red-100 text-red-700"
                                         } rounded-md`}
                                 >
                                     <i className="bi bi-check-circle-fill mr-2"></i>
@@ -193,6 +193,17 @@ function Contact() {
                                         jitugandhare@gmail.com
                                     </a>
                                 </li>
+
+                                <li className="flex items-center">
+                                    <i className="bi bi-envelope mr-2"></i>
+                                    <a
+
+                                        className="text-blue-500 hover:underline"
+                                    >
+                                        +91 7999649443
+                                    </a>
+                                </li>
+
                                 <li className="flex items-center">
                                     <i className="bi bi-geo-alt mr-2"></i>
                                     India
