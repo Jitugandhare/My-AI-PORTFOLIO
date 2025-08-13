@@ -31,8 +31,8 @@ class ProjectAgent extends BaseAgent {
         name: "Task Management",
         tech_stack: ["React", "Node.js", "Express", "MongoDb", "Tailwind CSS"],
         description: "A task management application with collaborative features, and progress tracking.",
-        highlights: ["Responsive design", "Status Updates", "Role-based Access Control", "Status & Priority Management",
-          "Drag-and-drop Tasks", "RESTFUL API", "User collaboration", "Progressive Web App", "JWT authentication"],
+        highlights: ["Responsive design", "Role-based Access Control", "Status & Priority Management",
+        , "RESTFUL API", "User collaboration", "Progressive Web App", "JWT authentication"],
         github_link: "https://github.com/Jitugandhare/Task-management",
         demo_link: "https://task-management-2-imev.onrender.com/"
       },

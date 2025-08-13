@@ -211,17 +211,7 @@ app.use('/*splat', (req, res) => {
   });
 });
 
-// Disable caching in development
-if (process.env.NODE_ENV !== 'production') {
-  app.use((req, res, next) => {
-    res.set({
-      'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
-      'Pragma': 'no-cache',
-      'Expires': '0'
-    });
-    next();
-  });
-}
+
 
 const PORT = process.env.PORT || 5001;
 

@@ -38,18 +38,7 @@ class CareerAgent extends BaseAgent {
           "Protected routes with JWT authentication"
         ],
       },
-      {
-        title: "Insta-Fista Social App",
-        description:
-          "Built a social media platform where users can post photos, like/comment, and chat in real time.",
-        techStack: ["React", "Node.js", "Socket.io", "Express", "MongoDB", "ShadCN UI", "Tailwind CSS"],
-        features: [
-          "Image upload with preview",
-          "Like & comment functionality",
-          "Real-time chat using Socket.io",
-          "Profile views"
-        ],
-      },
+
       {
         title: "Task Management System",
         description:
@@ -62,6 +51,18 @@ class CareerAgent extends BaseAgent {
           "Responsive dashboard UI"
         ],
       },
+      {
+        title: "Insta-Fista Social App",
+        description:
+          "Built a social media platform where users can post photos, like/comment, and chat in real time.",
+        techStack: ["React", "Node.js", "Socket.io", "Express", "MongoDB", "ShadCN UI", "Tailwind CSS"],
+        features: [
+          "Image upload with preview",
+          "Like & comment functionality",
+          "Real-time chat using Socket.io",
+          "Profile views"
+        ],
+      },
     ];
   }
 
@@ -69,7 +70,7 @@ class CareerAgent extends BaseAgent {
   //   const prompt = `
   //   Generate a professional summary of my work experience for a portfolio website.
   //   Highlight relevant job roles, responsibilities, achievements, and years of experience.
-    
+
   //   Use markdown formatting with clear sections.
   // `;
   //   return await this.getResponse(prompt);

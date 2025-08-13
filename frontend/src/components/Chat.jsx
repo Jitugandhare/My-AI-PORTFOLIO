@@ -36,9 +36,7 @@ function Chat({ agentType, initialMessage, agentInitials, directQuestion }) {
             try {
                 const response = await axios.post(
                     `${API_BASE_URL}/api/${agentType}`,
-                    {
-                        message: messageToSend,
-                    },
+                    { message: messageToSend },
                     {
                         headers: {
                             "Content-Type": "application/json",
@@ -73,7 +71,7 @@ function Chat({ agentType, initialMessage, agentInitials, directQuestion }) {
         [input, agentType, API_BASE_URL]
     );
 
-    const handleKeyPress = (e) => {
+    const handleKeyDown = (e) => {
         if (e.key === "Enter") {
             handleSendMessage();
         }
@@ -114,38 +112,15 @@ function Chat({ agentType, initialMessage, agentInitials, directQuestion }) {
     const renderContent = (content) => {
         let formattedContent = content;
 
-        formattedContent = formattedContent.replace(
-            /#{6}\s+(.*?)(?=\n|$)/g,
-            "<h6>$1</h6>"
-        );
-        formattedContent = formattedContent.replace(
-            /#{5}\s+(.*?)(?=\n|$)/g,
-            "<h5>$1</h5>"
-        );
-        formattedContent = formattedContent.replace(
-            /#{4}\s+(.*?)(?=\n|$)/g,
-            "<h4>$1</h4>"
-        );
-        formattedContent = formattedContent.replace(
-            /#{3}\s+(.*?)(?=\n|$)/g,
-            "<h3>$1</h3>"
-        );
-        formattedContent = formattedContent.replace(
-            /#{2}\s+(.*?)(?=\n|$)/g,
-            "<h2>$1</h2>"
-        );
-        formattedContent = formattedContent.replace(
-            /#{1}\s+(.*?)(?=\n|$)/g,
-            "<h1>$1</h1>"
-        );
+        formattedContent = formattedContent.replace(/#{6}\s+(.*?)(?=\n|$)/g, "<h6>$1</h6>");
+        formattedContent = formattedContent.replace(/#{5}\s+(.*?)(?=\n|$)/g, "<h5>$1</h5>");
+        formattedContent = formattedContent.replace(/#{4}\s+(.*?)(?=\n|$)/g, "<h4>$1</h4>");
+        formattedContent = formattedContent.replace(/#{3}\s+(.*?)(?=\n|$)/g, "<h3>$1</h3>");
+        formattedContent = formattedContent.replace(/#{2}\s+(.*?)(?=\n|$)/g, "<h2>$1</h2>");
+        formattedContent = formattedContent.replace(/#{1}\s+(.*?)(?=\n|$)/g, "<h1>$1</h1>");
 
-        formattedContent = formattedContent.replace(
-            /\*\*(.*?)\*\*/g,
-            "<strong>$1</strong>"
-        );
-
+        formattedContent = formattedContent.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
         formattedContent = formattedContent.replace(/\*(.*?)\*/g, "<em>$1</em>");
-
         formattedContent = formattedContent.replace(/`(.*?)`/g, "<code>$1</code>");
 
         formattedContent = formattedContent.replace(
@@ -153,19 +128,13 @@ function Chat({ agentType, initialMessage, agentInitials, directQuestion }) {
             '<a href="$2" target="_blank">$1</a>'
         );
 
-        formattedContent = formattedContent.replace(
-            /^\s*\*\s+(.*?)(?=\n|$)/gm,
-            "<li>$1</li>"
-        );
+        formattedContent = formattedContent.replace(/^\s*\*\s+(.*?)(?=\n|$)/gm, "<li>$1</li>");
         formattedContent = formattedContent.replace(
             /<li>(.*?)<\/li>(?:\s*<li>.*?<\/li>)*/g,
             "<ul>$&</ul>"
         );
 
-        formattedContent = formattedContent.replace(
-            /^\s*\d+\.\s+(.*?)(?=\n|$)/gm,
-            "<li>$1</li>"
-        );
+        formattedContent = formattedContent.replace(/^\s*\d+\.\s+(.*?)(?=\n|$)/gm, "<li>$1</li>");
         formattedContent = formattedContent.replace(
             /<li>(.*?)<\/li>(?:\s*<li>.*?<\/li>)*/g,
             "<ol>$&</ol>"
@@ -180,8 +149,7 @@ function Chat({ agentType, initialMessage, agentInitials, directQuestion }) {
                 {messages.map((message, index) => (
                     <div
                         key={index}
-                        className={`message ${message.isUser ? "user-message" : "agent-message"
-                            }`}
+                        className={`message ${message.isUser ? "user-message" : "agent-message"}`}
                     >
                         {!message.isUser && (
                             <div className="message-avatar">
@@ -216,7 +184,7 @@ function Chat({ agentType, initialMessage, agentInitials, directQuestion }) {
                         placeholder="Type your message..."
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
-                        onKeyPress={handleKeyPress}
+                        onKeyDown={handleKeyDown} 
                     />
                     <button
                         id={`${agentType}-send`}

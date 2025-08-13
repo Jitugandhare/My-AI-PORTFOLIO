@@ -108,6 +108,7 @@ function Home() {
                             <li className="py-3 px-2">E-commerce Platform</li>
                             <li className="py-3 px-2">Task Management Application</li>
                             <li className="py-3 px-2">Insta-Fista - Social Application</li>
+                            <li className="py-3 px-2">SalesWay Dashboard</li>
                         </ul>
                         <div className="mt-4">
                             <Link

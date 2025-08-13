@@ -90,6 +90,8 @@ function Projects() {
                             </div>
                         </div>
                     </div>
+
+
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
                         <div className="project-image-placeholder">Task Management App</div>
                         <div className="p-6">
@@ -131,6 +133,7 @@ function Projects() {
                             </div>
                         </div>
                     </div>
+
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
                         <div className="project-image-placeholder">Insta-Fista - Social Application</div>
                         <div className="p-6">
@@ -170,6 +173,9 @@ function Projects() {
                             </div>
                         </div>
                     </div>
+
+
+                  
                 </div>
             </div>
 

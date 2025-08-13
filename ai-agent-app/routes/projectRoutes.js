@@ -18,7 +18,7 @@ projectRoute.post('/', async (req, res) => {
             projectId = 'project1';
         } else if (message.toLowerCase().includes('task') || message.toLowerCase().includes('management')) {
             projectId = 'project2';
-        } else if (message.toLowerCase().includes('data') || message.toLowerCase().includes('visualization') || message.toLowerCase().includes('dashboard')) {
+        } else if (message.toLowerCase().includes('insta') || message.toLowerCase().includes('fista') || message.toLowerCase().includes('social')|| message.toLowerCase().includes('application')) {
             projectId = 'project3';
         }
 
