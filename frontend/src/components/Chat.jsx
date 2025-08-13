@@ -105,6 +105,7 @@ function Chat({ agentType, initialMessage, agentInitials, directQuestion }) {
             const cleanedQuestion = cleanQuestion(directQuestion);
             setInput(cleanedQuestion);
             handleSendMessage(cleanedQuestion);
+            setInput("")
             setProcessedQuestions((prev) => [...prev, directQuestion]);
         }
     }, [directQuestion, processedQuestions, handleSendMessage]);

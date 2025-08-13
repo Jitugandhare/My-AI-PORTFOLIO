@@ -1,5 +1,8 @@
 import { Link, useLocation } from "react-router";
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons'; 
+
 
 function Layout({ children }) {
     const location = useLocation();
@@ -12,8 +15,10 @@ function Layout({ children }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex items-center">
-                            <Link className="text-xl font-bold" to="/">
-                                Jitu
+                            <Link className="text-3xl font-bold" to="/">
+                                JITU {" "} 
+                               
+                                <FontAwesomeIcon icon={faCode} className="fa-beat" />
                             </Link>
                         </div>
                         <div className="hidden md:flex items-center space-x-4">
@@ -201,7 +206,12 @@ function Layout({ children }) {
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                         {/* Left Section */}
                         <div className="mb-8 md:mb-0">
-                            <h5 className="text-xl font-bold text-white mb-3">Portfolio</h5>
+                            <Link className="text-2xl font-bold text-white mb-3" to="/">
+                                JITU {" "} 
+                               
+                                <FontAwesomeIcon icon={faCode} className="fa-beat" />
+                            </Link>
+                            
                             <p className="max-w-md text-gray-400">
                                 Showcasing my work with the help of AI agents
                             </p>
